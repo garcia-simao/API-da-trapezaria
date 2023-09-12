@@ -5,6 +5,8 @@ from .models import Funcionario
 from .models import Avaliacao_de_alimentos
 from .models import Avaliacao_da_cozinha
 from .models import Infomacao_de_tempetatura
+from .models import Avaliacao_do_chefe
+
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,7 +23,7 @@ class Prato_do_dia_Serializer(serializers.ModelSerializer):
 class FuncionarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Funcionario
-        fields = ['id', 'nome', 'email', 'Numero_do_bilhete','funcao','departamento','permissao','endereco','data_de_registro']
+        fields = ['id', 'nome', 'email', 'Numero_do_bilhete','funcao','imagem','departamento','permissao','endereco','data_de_registro']
 
 
 class Avaliacao_de_alimentosSerializer(serializers.ModelSerializer):
@@ -40,5 +42,10 @@ class Informacao_de_temperaturaSerializer(serializers.ModelSerializer):
         model = Infomacao_de_tempetatura
         fields = ['id', 'temperatura_ambiental', 'temperatura_do_contentor','data_de_registro']
 
+
+class Avaliacao_do_chefeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Avaliacao_do_chefe
+        fields = ['id', 'id_do_chefe', 'id_do_usuario','numero_de_estrelas','data_de_registro']
 
 

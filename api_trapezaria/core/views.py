@@ -13,7 +13,8 @@ from .serializers import Avaliacao_da_cozinhaSerializer
 from .models import Infomacao_de_tempetatura
 from .serializers import Informacao_de_temperaturaSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated
-
+from .models import Avaliacao_do_chefe
+from .serializers import Avaliacao_do_chefeSerializer
 
 
 class UsuarioViewSet(viewsets.ModelViewSet):
@@ -231,6 +232,37 @@ class Informacao_de_temperaturaViewSet(viewsets.ModelViewSet):
         return queryset
 
     
+class Avaliacao_do_chefeViewSet(viewsets.ModelViewSet):
+    queryset = Avaliacao_do_chefe.objects.all()
+    serializer_class = Avaliacao_do_chefeSerializer
+    permission_classes = (IsAuthenticated,)
+
+    #Criação de filtros
+    def get_queryset(self):
+        queryset = Avaliacao_do_chefe.objects.all()
+        id_do_chefe = self.request.query_params.get('id_do_chefe')
+        id_do_usuario = self.request.query_params.get('id_do_usuario')
+        numero_de_estrelas = self.request.query_params.get('numero_de_estrelas')
+        data_de_registro = self.request.query_params.get('data_de_registro')
+
+        if id_do_chefe:
+            queryset = queryset.filter(id_do_chefe=id_do_chefe)
+            return queryset
+
+        if numero_de_estrelas:
+            queryset = queryset.filter(numero_de_estrelas=numero_de_estrelas)
+            return queryset
+        
+        if id_do_usuario:
+            queryset = queryset.filter(id_do_usuario=id_do_usuario)
+            return queryset
+
+        if data_de_registro:
+            queryset = queryset.filter(data_de_registro=data_de_registro)
+            return queryset
+        return queryset
+
+
 
 
 

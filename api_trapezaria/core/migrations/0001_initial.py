@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Infomacao_de_tempetatura',
+            name='Informacao_de_temperatura',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('temperatura_ambiental', models.FloatField()),
@@ -74,7 +74,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Avaliacao_de_alimentos',
+            name='Avaliacao_de_alimento',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('numero_de_estrelas', models.IntegerField()),

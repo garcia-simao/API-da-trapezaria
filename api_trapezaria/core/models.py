@@ -69,7 +69,7 @@ class Prato_do_dia(models.Model):
 
 
 
-class Avaliacao_de_alimentos(models.Model):
+class Avaliacao_de_alimento(models.Model):
     id_do_prato = models.ForeignKey(Prato_do_dia, on_delete=models.PROTECT, related_name="pratos")
     numero_de_estrelas = models.IntegerField()
     id_do_usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="usuario")
@@ -89,7 +89,7 @@ class Avaliacao_da_cozinha(models.Model):
     
 
 
-class Infomacao_de_tempetatura(models.Model):
+class Informacao_de_temperatura(models.Model):
     temperatura_ambiental = models.FloatField()
     temperatura_do_contentor = models.FloatField()
     data_de_registro = models.DateTimeField(auto_now_add=True)

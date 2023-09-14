@@ -6,11 +6,11 @@ from .models import Prato_do_dia
 from .serializers import Prato_do_dia_Serializer
 from .models import Funcionario
 from .serializers import FuncionarioSerializer
-from .models import Avaliacao_de_alimentos
+from .models import Avaliacao_de_alimento
 from .serializers import Avaliacao_de_alimentosSerializer
 from .models import Avaliacao_da_cozinha
 from .serializers import Avaliacao_da_cozinhaSerializer
-from .models import Infomacao_de_tempetatura
+from .models import Informacao_de_temperatura
 from .serializers import Informacao_de_temperaturaSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from .models import Avaliacao_do_chefe
@@ -150,13 +150,13 @@ class FuncionarioViewSet(viewsets.ModelViewSet):
 
 
 class Avaliacao_de_alimentosViewSet(viewsets.ModelViewSet):
-    queryset = Avaliacao_de_alimentos.objects.all()
+    queryset = Avaliacao_de_alimento.objects.all()
     serializer_class = Avaliacao_de_alimentosSerializer
     permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):
-        queryset = Avaliacao_de_alimentos.objects.all()
+        queryset = Avaliacao_de_alimento.objects.all()
         id_do_prato = self.request.query_params.get('id_do_prato')
         numero_de_estrelas = self.request.query_params.get('numero_de_estrelas')
         id_do_usuario = self.request.query_params.get('id_do_usuario')
@@ -207,13 +207,13 @@ class Avaliacao_da_cozinhaViewSet(viewsets.ModelViewSet):
 
 
 class Informacao_de_temperaturaViewSet(viewsets.ModelViewSet):
-    queryset = Infomacao_de_tempetatura.objects.all()
+    queryset = Informacao_de_temperatura.objects.all()
     serializer_class = Informacao_de_temperaturaSerializer
     permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):
-        queryset = Infomacao_de_tempetatura.objects.all()
+        queryset = Informacao_de_temperatura.objects.all()
         temperatura_ambiental = self.request.query_params.get('temperatura_ambiental')
         temperatura_do_contentor = self.request.query_params.get('temperatura_do_contentor')
         data_de_registro = self.request.query_params.get('data_de_registro')

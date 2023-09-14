@@ -2,9 +2,9 @@ from rest_framework import serializers
 from .models import Usuario
 from .models import Prato_do_dia
 from .models import Funcionario
-from .models import Avaliacao_de_alimentos
+from .models import Avaliacao_de_alimento
 from .models import Avaliacao_da_cozinha
-from .models import Infomacao_de_tempetatura
+from .models import Informacao_de_temperatura
 from .models import Avaliacao_do_chefe
 
 
@@ -28,7 +28,7 @@ class FuncionarioSerializer(serializers.ModelSerializer):
 
 class Avaliacao_de_alimentosSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Avaliacao_de_alimentos
+        model = Avaliacao_de_alimento
         fields = ['id', 'id_do_prato', 'numero_de_estrelas', 'id_do_usuario','data_de_registro']
 
 
@@ -39,7 +39,7 @@ class Avaliacao_da_cozinhaSerializer(serializers.ModelSerializer):
 
 class Informacao_de_temperaturaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Infomacao_de_tempetatura
+        model = Informacao_de_temperatura
         fields = ['id', 'temperatura_ambiental', 'temperatura_do_contentor','data_de_registro']
 
 

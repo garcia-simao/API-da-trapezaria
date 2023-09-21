@@ -20,7 +20,7 @@ from .serializers import Avaliacao_do_chefeSerializer
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
     
     # Criacao de filtros
     def get_queryset(self):
@@ -67,7 +67,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 class Prato_do_dia_ViewSet(viewsets.ModelViewSet):
     queryset = Prato_do_dia.objects.all()
     serializer_class = Prato_do_dia_Serializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     #criação de filtros
     def get_queryset(self):
@@ -105,7 +105,7 @@ class Prato_do_dia_ViewSet(viewsets.ModelViewSet):
 class FuncionarioViewSet(viewsets.ModelViewSet):
     queryset = Funcionario.objects.all()
     serializer_class = FuncionarioSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         queryset = Funcionario.objects.all()
@@ -152,7 +152,7 @@ class FuncionarioViewSet(viewsets.ModelViewSet):
 class Avaliacao_de_alimentosViewSet(viewsets.ModelViewSet):
     queryset = Avaliacao_de_alimento.objects.all()
     serializer_class = Avaliacao_de_alimentosSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):
@@ -182,7 +182,7 @@ class Avaliacao_de_alimentosViewSet(viewsets.ModelViewSet):
 class Avaliacao_da_cozinhaViewSet(viewsets.ModelViewSet):
     queryset = Avaliacao_da_cozinha.objects.all()
     serializer_class = Avaliacao_da_cozinhaSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):
@@ -209,7 +209,7 @@ class Avaliacao_da_cozinhaViewSet(viewsets.ModelViewSet):
 class Informacao_de_temperaturaViewSet(viewsets.ModelViewSet):
     queryset = Informacao_de_temperatura.objects.all()
     serializer_class = Informacao_de_temperaturaSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):
@@ -235,7 +235,7 @@ class Informacao_de_temperaturaViewSet(viewsets.ModelViewSet):
 class Avaliacao_do_chefeViewSet(viewsets.ModelViewSet):
     queryset = Avaliacao_do_chefe.objects.all()
     serializer_class = Avaliacao_do_chefeSerializer
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
 
     #Criação de filtros
     def get_queryset(self):

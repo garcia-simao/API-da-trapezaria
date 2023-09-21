@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0=0)xz_yolhb(h_%7%&b4ig!+$x_9g+3os8=nz0znsxi#us9f(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     
 ]
 
@@ -54,7 +55,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8000',
+)
 
 ROOT_URLCONF = 'api_trapezaria.urls'
 
@@ -86,6 +92,24 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+"""""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'appdb',
+        'USER': 'root',
+        'PASSWORD': 'Silviosimons1234',
+        'HOST': 'emhtcellotyoasg.clouds2africa.com',
+        'PORT': '1449',
+        'OPTIONS':{
+        'charset': 'utf8mb4',
+        'init_command': "SET sql_mode= 'STRICT_TRANS_TABLES",
+        }
+    }
+}
+"""
 
 
 # Password validation

@@ -37,7 +37,7 @@ class Funcionario(models.Model):
     email = models.EmailField(max_length=50)
     Numero_do_bilhete = models.CharField(max_length=50)
     funcao = models.CharField(max_length=50)
-    imagem = models.ImageField(upload_to='')
+    imagem = models.CharField(max_length=500)
     departamento = models.CharField(max_length=50)
     permissao = models.CharField(max_length=50)
     endereco = models.CharField(max_length=50)
@@ -54,7 +54,7 @@ class Prato_do_dia(models.Model):
     nome_do_prato = models.CharField(max_length=50)
     descricao = models.CharField(max_length=500)
     chefe = models.ForeignKey(Funcionario, on_delete=models.PROTECT, related_name="funcionarios" )
-    imagem = models.ImageField(upload_to='')
+    imagem = models.CharField(max_length=500)
     caloria = models.FloatField()
     data_refeicao = models.DateTimeField()
     data_de_registro = models.DateTimeField(auto_now_add=True)
@@ -110,5 +110,14 @@ class Avaliacao_do_chefe(models.Model):
         return str(self.id_do_chefe)
 
 
+class Ocupacao(models.Model):
+    numero = models.IntegerField()
+    
+    def __str__(self):
+        return str(self.numero)
+    
+
+
+        
 
     

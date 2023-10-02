@@ -6,6 +6,7 @@ from .models import Avaliacao_de_alimento
 from .models import Avaliacao_da_cozinha
 from .models import Informacao_de_temperatura
 from .models import Avaliacao_do_chefe
+from .models import Ocupacao
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -48,4 +49,8 @@ class Avaliacao_do_chefeSerializer(serializers.ModelSerializer):
         model = Avaliacao_do_chefe
         fields = ['id', 'id_do_chefe', 'id_do_usuario','numero_de_estrelas','data_de_registro']
 
+class OcupacaoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ocupacao
+        fields = ['id', 'numero']
 

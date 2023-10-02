@@ -12,6 +12,7 @@ from core.views import Avaliacao_de_alimentosViewSet
 from core.views import Avaliacao_da_cozinhaViewSet
 from core.views import Informacao_de_temperaturaViewSet
 from core.views import Avaliacao_do_chefeViewSet
+from core.views import OcupacaoViewSet
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 
@@ -23,6 +24,7 @@ router.register(r'avaliacao-alimentos', Avaliacao_de_alimentosViewSet)
 router.register(r'avaliacao-cozinha', Avaliacao_da_cozinhaViewSet)
 router.register(r'avaliacao-chefe', Avaliacao_do_chefeViewSet)
 router.register(r'informacao-temperatura', Informacao_de_temperaturaViewSet)
+router.register(r'ocupacao', OcupacaoViewSet)
 
 
 urlpatterns = [

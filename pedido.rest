@@ -1,21 +1,23 @@
 
 
-GET http://127.0.0.1:8000/usuario/?codigo_entrada=12348
+GET http://127.0.0.1:8000/avaliacao-cozinha/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU2NDA0ODE3LCJpYXQiOjE2OTQ1MTY4MTcsImp0aSI6IjQzNWQzM2Y5MTdmNTQ4ZjU4OGNhMjZhMmM4ODk5NjFkIiwidXNlcl9pZCI6MX0.AJ8dPLnJNOXni95rU_Wt-2he_l7fZOiamTX93w7zn3I
 
 
 
 ###
 
-GET https://example.com/topics/1 HTTP/1.1
-###
-
-POST http://127.0.0.1:8000/usuario/
+GET http://emhtcellotyoasg.clouds2africa.com:1489/avaliacao-cozinha/ 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU2NDA0ODE3LCJpYXQiOjE2OTQ1MTY4MTcsImp0aSI6IjQzNWQzM2Y5MTdmNTQ4ZjU4OGNhMjZhMmM4ODk5NjFkIiwidXNlcl9pZCI6MX0.AJ8dPLnJNOXni95rU_Wt-2he_l7fZOiamTX93w7zn3I
 
+###
+
+POST http://emhtcellotyoasg.clouds2africa.com:1489/avaliacao-cozinha/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU2NDA0ODE3LCJpYXQiOjE2OTQ1MTY4MTcsImp0aSI6IjQzNWQzM2Y5MTdmNTQ4ZjU4OGNhMjZhMmM4ODk5NjFkIiwidXNlcl9pZCI6MX0.AJ8dPLnJNOXni95rU_Wt-2he_l7fZOiamTX93w7zn3I
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "numero_de_estrelas": "2",
+    "id_do_usuario": "20",
+    "id_da_cozinha": "1"
 }

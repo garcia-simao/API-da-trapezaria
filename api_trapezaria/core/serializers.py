@@ -7,6 +7,7 @@ from .models import Avaliacao_da_cozinha
 from .models import Informacao_de_temperatura
 from .models import Avaliacao_do_chefe
 from .models import Ocupacao
+from .models import Cozinha
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -36,7 +37,7 @@ class Avaliacao_de_alimentosSerializer(serializers.ModelSerializer):
 class Avaliacao_da_cozinhaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Avaliacao_da_cozinha
-        fields = ['id', 'numero_de_estrelas', 'id_do_usuario','data_de_registro']
+        fields = ['id', 'numero_de_estrelas', 'id_do_usuario', 'id_da_cozinha' ,'data_de_registro']
 
 class Informacao_de_temperaturaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -52,5 +53,9 @@ class Avaliacao_do_chefeSerializer(serializers.ModelSerializer):
 class OcupacaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ocupacao
-        fields = ['id', 'numero']
+        fields = ['id', 'numero','temperatura','humidade','co2']
 
+class CozinhaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cozinha
+        fields = ['id', 'nome' ,'descricao','foto',]

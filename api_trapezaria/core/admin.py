@@ -7,6 +7,7 @@ from .models import Avaliacao_da_cozinha
 from .models import Informacao_de_temperatura
 from .models import Avaliacao_do_chefe
 from .models import Ocupacao
+from .models import Cozinha
 
 admin.site.register(Usuario)
 admin.site.register(Prato_do_dia)
@@ -16,5 +17,6 @@ admin.site.register(Avaliacao_da_cozinha)
 admin.site.register(Informacao_de_temperatura)
 admin.site.register(Avaliacao_do_chefe)
 admin.site.register(Ocupacao)
+admin.site.register(Cozinha)
 # Register your models here.
 

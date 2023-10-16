@@ -77,11 +77,20 @@ class Avaliacao_de_alimento(models.Model):
     
     def __str__(self):
         return str(self.numero_de_estrelas)
+    
+class Cozinha(models.Model):
+    nome = models.CharField(max_length=500)
+    descricao = models.CharField(max_length=9000)
+    foto = models.CharField(max_length=500)
+   
+    def __str__(self):
+        return self.nome
 
 
 class Avaliacao_da_cozinha(models.Model):
     numero_de_estrelas = models.IntegerField()
     id_do_usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="usuarios")
+    id_da_cozinha = models.ForeignKey(Cozinha, on_delete=models.PROTECT, related_name="cozinha")
     data_de_registro = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
@@ -112,7 +121,10 @@ class Avaliacao_do_chefe(models.Model):
 
 class Ocupacao(models.Model):
     numero = models.IntegerField()
-    
+    temperatura = models.FloatField()
+    humidade = models.CharField(max_length=50)
+    co2 = models.CharField(max_length=50)
+
     def __str__(self):
         return str(self.numero)
     

@@ -17,6 +17,8 @@ from .models import Avaliacao_do_chefe
 from .serializers import Avaliacao_do_chefeSerializer
 from .models import Ocupacao
 from .serializers import OcupacaoSerializer
+from .models import Cozinha
+from .serializers import CozinhaSerializer
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 
@@ -289,3 +291,21 @@ class OcupacaoViewSet(viewsets.ModelViewSet):
         return queryset
 
 
+
+class CozinhaViewSet(viewsets.ModelViewSet):
+    queryset = Cozinha.objects.all()
+    serializer_class = CozinhaSerializer
+    permission_classes = (IsAuthenticated,)
+
+    #Criação de filtros
+    def get_queryset(self):
+        queryset = Cozinha.objects.all()
+        descricao = self.request.query_params.get('descricao')
+
+
+        if descricao:
+            queryset = queryset.filter(descricao=descricao)
+            return queryset
+
+
+        return queryset

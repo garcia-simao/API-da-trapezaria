@@ -15,7 +15,7 @@ def report_uploaded(sender, instance, created, **kwargs):
 
 #Criacao dos modelos
 class Usuario(models.Model):
-    codigo_entrada = models.IntegerField()
+    codigo_entrada = models.IntegerField(unique=True)
     nome = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     username = models.CharField(max_length=50)

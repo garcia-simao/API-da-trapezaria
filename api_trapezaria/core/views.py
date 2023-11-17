@@ -75,6 +75,8 @@ class Prato_do_dia_ViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     filter_backends = (SearchFilter, OrderingFilter)
     search_fields = ('nome_do_prato','data_refeicao', 'caloria') 
+    ordering_fields = ('data_refeicao')
+    ordering = ('-data_refeicao')
 
     #criação de filtros
     def get_queryset(self):

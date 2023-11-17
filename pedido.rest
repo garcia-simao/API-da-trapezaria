@@ -1,15 +1,14 @@
 
 
-GET http://127.0.0.1:8000/avaliacao-cozinha/
+GET http://127.0.0.1:8000/pratos/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU2NDA0ODE3LCJpYXQiOjE2OTQ1MTY4MTcsImp0aSI6IjQzNWQzM2Y5MTdmNTQ4ZjU4OGNhMjZhMmM4ODk5NjFkIiwidXNlcl9pZCI6MX0.AJ8dPLnJNOXni95rU_Wt-2he_l7fZOiamTX93w7zn3I
 
 
 
 ###
 
-GET http://emhtcellotyoasg.clouds2africa.com:1489/avaliacao-cozinha/ 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU2NDA0ODE3LCJpYXQiOjE2OTQ1MTY4MTcsImp0aSI6IjQzNWQzM2Y5MTdmNTQ4ZjU4OGNhMjZhMmM4ODk5NjFkIiwidXNlcl9pZCI6MX0.AJ8dPLnJNOXni95rU_Wt-2he_l7fZOiamTX93w7zn3I
-
+GET http://emhtcellotyoasg.clouds2africa.com:1489/pratos/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU3NTUwMDgwLCJpYXQiOjE2OTU2NjIwODAsImp0aSI6IjYxYTgwOWJiN2I0ODQ0NDZhYTFlOWVmOWNhZGZlM2RhIiwidXNlcl9pZCI6MX0.yz2_-wH1Y6NK12wIxFyPvcZM8O-H9B5vEzs9EpZd5xo
 ###
 
 POST http://emhtcellotyoasg.clouds2africa.com:1489/avaliacao-cozinha/

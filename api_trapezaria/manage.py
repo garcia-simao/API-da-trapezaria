@@ -17,6 +17,12 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+     # Adicione o argumento --port seguido pelo número da porta desejada
+    sys.argv.append('--noreload')  # Opcional: Desativa o recarregamento automático para evitar problemas com algumas alterações na porta
+    sys.argv.append('--port=8001')  # Substitua 8001 pelo número da porta desejada
+
+    execute_from_command_line(sys.argv)
+
 
 if __name__ == '__main__':
     main()

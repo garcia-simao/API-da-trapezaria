@@ -7,7 +7,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 
 ###
 
-GET http://emhtcellotyoasg.clouds2africa.com:1489/pratos/ 
+GET http://emhtcellotyoasg.clouds2africa.com:1648/pratos/ 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjozMTU3NTUwMDgwLCJpYXQiOjE2OTU2NjIwODAsImp0aSI6IjYxYTgwOWJiN2I0ODQ0NDZhYTFlOWVmOWNhZGZlM2RhIiwidXNlcl9pZCI6MX0.yz2_-wH1Y6NK12wIxFyPvcZM8O-H9B5vEzs9EpZd5xo
 ###
 

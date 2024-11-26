@@ -1,4 +1,6 @@
-#!/home/garcia_simao/Documentos/drf-Trapezaria/api_trapezaria/venv/bin/python3
+#!/bin/sh
+'''exec' "/home/garcia_simao/Documentos/Projectos de trabalho/yotta/drf-Trapezaria/api_trapezaria/venv/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

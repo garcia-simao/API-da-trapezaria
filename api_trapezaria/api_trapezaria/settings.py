@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+import os
 
 
 
@@ -157,6 +158,10 @@ USE_TZ = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+
+#configuração para o django aceder a pasta dos arquivos de mídea da raíz do computador 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Static files (CSS, JavaScript, Images)
